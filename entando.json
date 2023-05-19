@@ -1,0 +1,15 @@
+{
+    "microservices": [
+        {
+            "name": "conference-ms",
+            "stack": "spring-boot",
+            "healthCheckPath": "/api/health"
+        }
+    ],
+    "microfrontends": [],
+    "svc": [],
+    "name": "e72-jhipster-conference",
+    "version": "0.0.1",
+    "description": "e72-jhipster-conference description",
+    "type": "bundle"
+}
