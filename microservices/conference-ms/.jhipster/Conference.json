@@ -1,0 +1,21 @@
+{
+  "changelogDate": "20230519175438",
+  "clientRootFolder": "conference",
+  "databaseType": "sql",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "conference",
+  "name": "Conference",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
