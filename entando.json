@@ -4,7 +4,10 @@
             "name": "conference-ms",
             "stack": "spring-boot",
             "healthCheckPath": "/management/health",
-            "dbms": "postgresql"
+            "dbms": "postgresql",
+            "commands": {
+                "pack": "mvn clean package -DskipTests -Pprod"
+            }
         }
     ],
     "microfrontends": [
