@@ -3,11 +3,72 @@
         {
             "name": "conference-ms",
             "stack": "spring-boot",
-            "healthCheckPath": "/api/health"
+            "healthCheckPath": "/management/health",
+            "dbms": "postgresql"
         }
     ],
-    "microfrontends": [],
-    "svc": [],
+    "microfrontends": [
+        {
+            "name": "conference-table",
+            "customElement": "conference-table",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "conference-table",
+                "it": "conference-table"
+            },
+            "apiClaims": [
+                {
+                    "name": "conference-api",
+                    "type": "internal",
+                    "serviceName": "conference-ms"
+                }
+            ]
+        },
+        {
+            "name": "conference-form",
+            "customElement": "conference-form",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "conference-form",
+                "it": "conference-form"
+            },
+            "apiClaims": [
+                {
+                    "name": "conference-api",
+                    "type": "internal",
+                    "serviceName": "conference-ms"
+                }
+            ]
+        },
+        {
+            "name": "conference-details",
+            "customElement": "conference-details",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "conference-details",
+                "it": "conference-details"
+            },
+            "apiClaims": [
+                {
+                    "name": "conference-api",
+                    "type": "internal",
+                    "serviceName": "conference-ms"
+                }
+            ]
+        }
+    ],
+    "svc": [
+        "keycloak"
+    ],
     "name": "e72-jhipster-conference",
     "version": "0.0.1",
     "description": "e72-jhipster-conference description",
